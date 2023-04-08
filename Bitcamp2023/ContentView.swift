@@ -24,6 +24,14 @@ struct ContentView: View {
                         Text("Home")
                     }
                 }
+                
+                GraphView().tabItem {
+                    VStack {
+                        Image(systemName: "chart.pie.fill")
+                        Text("Graph")
+                    }
+                }
+                
             }
             .onAppear() {
                 authViewModel.checkUserState()
@@ -33,8 +41,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

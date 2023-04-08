@@ -24,6 +24,7 @@
 		0BE9061E29E0F5AE00BA4F6C /* UserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061D29E0F5AE00BA4F6C /* UserEntry.swift */; };
 		0BE9062029E0F62B00BA4F6C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061F29E0F62B00BA4F6C /* Helpers.swift */; };
 		BEFEE5C85252B66644EBBEF1 /* Pods_Bitcamp2023.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD392014AAA2F7EE6F71191C /* Pods_Bitcamp2023.framework */; };
+		C0BFF50229E21DF8002D5853 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BFF50129E21DF8002D5853 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0BE9061F29E0F62B00BA4F6C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		37B0D944DCFE6DD5B6F81883 /* Pods-Bitcamp2023.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcamp2023.release.xcconfig"; path = "Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023.release.xcconfig"; sourceTree = "<group>"; };
 		4D7093411ABC5A270E7801D1 /* Pods-Bitcamp2023.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcamp2023.debug.xcconfig"; path = "Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023.debug.xcconfig"; sourceTree = "<group>"; };
+		C0BFF50129E21DF8002D5853 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		DD392014AAA2F7EE6F71191C /* Pods_Bitcamp2023.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcamp2023.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		0BE905FF29E0EBDF00BA4F6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C0BFF50029E21D97002D5853 /* Graph */,
 				0BE9061929E0F45500BA4F6C /* CreateAccount */,
 				0BE9061229E0F13A00BA4F6C /* Home */,
 				0BE9060529E0EE2B00BA4F6C /* Login */,
@@ -172,6 +175,14 @@
 				0BE9061D29E0F5AE00BA4F6C /* UserEntry.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C0BFF50029E21D97002D5853 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				C0BFF50129E21DF8002D5853 /* GraphView.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		CA5B172BB740F0E64DC681E4 /* Pods */ = {
@@ -315,6 +326,7 @@
 				0BE9060329E0EDD400BA4F6C /* AppDelegate.swift in Sources */,
 				0BE9060129E0EBF700BA4F6C /* UserAuth.swift in Sources */,
 				0BE905F229E0EBB600BA4F6C /* ContentView.swift in Sources */,
+				C0BFF50229E21DF8002D5853 /* GraphView.swift in Sources */,
 				0BE9060B29E0EF2B00BA4F6C /* CustomTextFieldView.swift in Sources */,
 				0BE9062029E0F62B00BA4F6C /* Helpers.swift in Sources */,
 				0BE905F029E0EBB600BA4F6C /* Bitcamp2023App.swift in Sources */,

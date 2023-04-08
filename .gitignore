@@ -1,0 +1,7 @@
+*.zip
+*.tar
+*.tgz
+*.xcuserstate
+*.pbxproject
+.DS_Store
+__MACOSX

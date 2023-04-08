@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BE905F029E0EBB600BA4F6C /* Bitcamp2023App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE905EF29E0EBB600BA4F6C /* Bitcamp2023App.swift */; };
+		0BE905F229E0EBB600BA4F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE905F129E0EBB600BA4F6C /* ContentView.swift */; };
+		0BE905F429E0EBB600BA4F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE905F329E0EBB600BA4F6C /* Assets.xcassets */; };
+		0BE905F729E0EBB600BA4F6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE905F629E0EBB600BA4F6C /* Preview Assets.xcassets */; };
+		0BE9060129E0EBF700BA4F6C /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9060029E0EBF700BA4F6C /* UserAuth.swift */; };
+		0BE9060329E0EDD400BA4F6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9060229E0EDD400BA4F6C /* AppDelegate.swift */; };
+		0BE9060B29E0EF2B00BA4F6C /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9060A29E0EF2B00BA4F6C /* CustomTextFieldView.swift */; };
+		0BE9060D29E0EF4100BA4F6C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9060C29E0EF4100BA4F6C /* LoginView.swift */; };
+		0BE9060F29E0F0B000BA4F6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BE9060E29E0F0B000BA4F6C /* GoogleService-Info.plist */; };
+		0BE9061129E0F13400BA4F6C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061029E0F13400BA4F6C /* HomeView.swift */; };
+		0BE9061429E0F16F00BA4F6C /* UserInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061329E0F16F00BA4F6C /* UserInputField.swift */; };
+		0BE9061629E0F1B300BA4F6C /* SecureUserInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061529E0F1B300BA4F6C /* SecureUserInputField.swift */; };
+		0BE9061829E0F27F00BA4F6C /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061729E0F27F00BA4F6C /* ButtonDesign.swift */; };
+		0BE9061B29E0F45F00BA4F6C /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061A29E0F45F00BA4F6C /* CreateAccountView.swift */; };
+		0BE9061E29E0F5AE00BA4F6C /* UserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061D29E0F5AE00BA4F6C /* UserEntry.swift */; };
+		0BE9062029E0F62B00BA4F6C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9061F29E0F62B00BA4F6C /* Helpers.swift */; };
+		BEFEE5C85252B66644EBBEF1 /* Pods_Bitcamp2023.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD392014AAA2F7EE6F71191C /* Pods_Bitcamp2023.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BE905EC29E0EBB600BA4F6C /* Bitcamp2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitcamp2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE905EF29E0EBB600BA4F6C /* Bitcamp2023App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcamp2023App.swift; sourceTree = "<group>"; };
+		0BE905F129E0EBB600BA4F6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0BE905F329E0EBB600BA4F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0BE905F629E0EBB600BA4F6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0BE9060029E0EBF700BA4F6C /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		0BE9060229E0EDD400BA4F6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0BE9060A29E0EF2B00BA4F6C /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		0BE9060C29E0EF4100BA4F6C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0BE9060E29E0F0B000BA4F6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0BE9061029E0F13400BA4F6C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0BE9061329E0F16F00BA4F6C /* UserInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputField.swift; sourceTree = "<group>"; };
+		0BE9061529E0F1B300BA4F6C /* SecureUserInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureUserInputField.swift; sourceTree = "<group>"; };
+		0BE9061729E0F27F00BA4F6C /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
+		0BE9061A29E0F45F00BA4F6C /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		0BE9061D29E0F5AE00BA4F6C /* UserEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntry.swift; sourceTree = "<group>"; };
+		0BE9061F29E0F62B00BA4F6C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		37B0D944DCFE6DD5B6F81883 /* Pods-Bitcamp2023.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcamp2023.release.xcconfig"; path = "Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023.release.xcconfig"; sourceTree = "<group>"; };
+		4D7093411ABC5A270E7801D1 /* Pods-Bitcamp2023.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcamp2023.debug.xcconfig"; path = "Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023.debug.xcconfig"; sourceTree = "<group>"; };
+		DD392014AAA2F7EE6F71191C /* Pods_Bitcamp2023.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcamp2023.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BE905E929E0EBB600BA4F6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFEE5C85252B66644EBBEF1 /* Pods_Bitcamp2023.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BE905E329E0EBB600BA4F6C = {
+			isa = PBXGroup;
+			children = (
+				0BE905EE29E0EBB600BA4F6C /* Bitcamp2023 */,
+				0BE905ED29E0EBB600BA4F6C /* Products */,
+				CA5B172BB740F0E64DC681E4 /* Pods */,
+				DC1D3E13B0665B4A59211C05 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0BE905ED29E0EBB600BA4F6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BE905EC29E0EBB600BA4F6C /* Bitcamp2023.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BE905EE29E0EBB600BA4F6C /* Bitcamp2023 */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9061C29E0F5A600BA4F6C /* Models */,
+				0BE9060E29E0F0B000BA4F6C /* GoogleService-Info.plist */,
+				0BE9060929E0EEFF00BA4F6C /* ReusableComponents */,
+				0BE905FE29E0EBD800BA4F6C /* Utilities */,
+				0BE905FD29E0EBD300BA4F6C /* Network */,
+				0BE905EF29E0EBB600BA4F6C /* Bitcamp2023App.swift */,
+				0BE905F129E0EBB600BA4F6C /* ContentView.swift */,
+				0BE905F329E0EBB600BA4F6C /* Assets.xcassets */,
+				0BE905FF29E0EBDF00BA4F6C /* Views */,
+				0BE905F529E0EBB600BA4F6C /* Preview Content */,
+			);
+			path = Bitcamp2023;
+			sourceTree = "<group>";
+		};
+		0BE905F529E0EBB600BA4F6C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0BE905F629E0EBB600BA4F6C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0BE905FD29E0EBD300BA4F6C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9060029E0EBF700BA4F6C /* UserAuth.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0BE905FE29E0EBD800BA4F6C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9060229E0EDD400BA4F6C /* AppDelegate.swift */,
+				0BE9061F29E0F62B00BA4F6C /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0BE905FF29E0EBDF00BA4F6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9061929E0F45500BA4F6C /* CreateAccount */,
+				0BE9061229E0F13A00BA4F6C /* Home */,
+				0BE9060529E0EE2B00BA4F6C /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BE9060529E0EE2B00BA4F6C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9060C29E0EF4100BA4F6C /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0BE9060929E0EEFF00BA4F6C /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9060A29E0EF2B00BA4F6C /* CustomTextFieldView.swift */,
+				0BE9061329E0F16F00BA4F6C /* UserInputField.swift */,
+				0BE9061529E0F1B300BA4F6C /* SecureUserInputField.swift */,
+				0BE9061729E0F27F00BA4F6C /* ButtonDesign.swift */,
+			);
+			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		0BE9061229E0F13A00BA4F6C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9061029E0F13400BA4F6C /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0BE9061929E0F45500BA4F6C /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9061A29E0F45F00BA4F6C /* CreateAccountView.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		0BE9061C29E0F5A600BA4F6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BE9061D29E0F5AE00BA4F6C /* UserEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA5B172BB740F0E64DC681E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D7093411ABC5A270E7801D1 /* Pods-Bitcamp2023.debug.xcconfig */,
+				37B0D944DCFE6DD5B6F81883 /* Pods-Bitcamp2023.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC1D3E13B0665B4A59211C05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD392014AAA2F7EE6F71191C /* Pods_Bitcamp2023.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BE905EB29E0EBB600BA4F6C /* Bitcamp2023 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BE905FA29E0EBB600BA4F6C /* Build configuration list for PBXNativeTarget "Bitcamp2023" */;
+			buildPhases = (
+				33C84D13B86583A1AC1D571A /* [CP] Check Pods Manifest.lock */,
+				0BE905E829E0EBB600BA4F6C /* Sources */,
+				0BE905E929E0EBB600BA4F6C /* Frameworks */,
+				0BE905EA29E0EBB600BA4F6C /* Resources */,
+				CB13E51688CF07BDACA8801D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bitcamp2023;
+			productName = Bitcamp2023;
+			productReference = 0BE905EC29E0EBB600BA4F6C /* Bitcamp2023.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BE905E429E0EBB600BA4F6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					0BE905EB29E0EBB600BA4F6C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 0BE905E729E0EBB600BA4F6C /* Build configuration list for PBXProject "Bitcamp2023" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0BE905E329E0EBB600BA4F6C;
+			productRefGroup = 0BE905ED29E0EBB600BA4F6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BE905EB29E0EBB600BA4F6C /* Bitcamp2023 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BE905EA29E0EBB600BA4F6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE905F729E0EBB600BA4F6C /* Preview Assets.xcassets in Resources */,
+				0BE9060F29E0F0B000BA4F6C /* GoogleService-Info.plist in Resources */,
+				0BE905F429E0EBB600BA4F6C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33C84D13B86583A1AC1D571A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitcamp2023-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB13E51688CF07BDACA8801D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bitcamp2023/Pods-Bitcamp2023-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BE905E829E0EBB600BA4F6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE9061B29E0F45F00BA4F6C /* CreateAccountView.swift in Sources */,
+				0BE9061629E0F1B300BA4F6C /* SecureUserInputField.swift in Sources */,
+				0BE9060D29E0EF4100BA4F6C /* LoginView.swift in Sources */,
+				0BE9061E29E0F5AE00BA4F6C /* UserEntry.swift in Sources */,
+				0BE9061129E0F13400BA4F6C /* HomeView.swift in Sources */,
+				0BE9061429E0F16F00BA4F6C /* UserInputField.swift in Sources */,
+				0BE9060329E0EDD400BA4F6C /* AppDelegate.swift in Sources */,
+				0BE9060129E0EBF700BA4F6C /* UserAuth.swift in Sources */,
+				0BE905F229E0EBB600BA4F6C /* ContentView.swift in Sources */,
+				0BE9060B29E0EF2B00BA4F6C /* CustomTextFieldView.swift in Sources */,
+				0BE9062029E0F62B00BA4F6C /* Helpers.swift in Sources */,
+				0BE905F029E0EBB600BA4F6C /* Bitcamp2023App.swift in Sources */,
+				0BE9061829E0F27F00BA4F6C /* ButtonDesign.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0BE905F829E0EBB600BA4F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0BE905F929E0EBB600BA4F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BE905FB29E0EBB600BA4F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D7093411ABC5A270E7801D1 /* Pods-Bitcamp2023.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bitcamp2023/Preview Content\"";
+				DEVELOPMENT_TEAM = 8RJGU8HFWK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Bitcamp2023;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0BE905FC29E0EBB600BA4F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B0D944DCFE6DD5B6F81883 /* Pods-Bitcamp2023.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bitcamp2023/Preview Content\"";
+				DEVELOPMENT_TEAM = 8RJGU8HFWK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Bitcamp2023;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BE905E729E0EBB600BA4F6C /* Build configuration list for PBXProject "Bitcamp2023" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BE905F829E0EBB600BA4F6C /* Debug */,
+				0BE905F929E0EBB600BA4F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BE905FA29E0EBB600BA4F6C /* Build configuration list for PBXNativeTarget "Bitcamp2023" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BE905FB29E0EBB600BA4F6C /* Debug */,
+				0BE905FC29E0EBB600BA4F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BE905E429E0EBB600BA4F6C /* Project object */;
+}

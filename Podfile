@@ -10,5 +10,7 @@ target 'Bitcamp2023' do
     pod 'Firebase/Auth'
     pod 'Firebase/Firestore'
     pod 'Firebase/Database'
+    pod 'lottie-ios'
+    # pod 'Plaid', '~> 2.2.0'
 
 end

@@ -12,5 +12,7 @@ struct UserEntry: Codable, Hashable {
     let fullname: String
     let username: String
     let email: String
+    let linkToken: String?
+    let accessToken: String? 
     let lists: [String] // list_id
 }

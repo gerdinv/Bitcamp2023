@@ -8,7 +8,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseCore
 import FirebaseFirestore
-
+import LinkKit
 
 final class UserAuth: ObservableObject {
     
@@ -16,6 +16,7 @@ final class UserAuth: ObservableObject {
     let db = Firestore.firestore()
     
     @Published var user: User? = nil
+    @Published var userEntry: UserEntry? = nil
     @Published var errorWithRequest: Bool = false
     
     func createAccount(fullname: String, username: String, email: String, password: String) {
@@ -26,14 +27,19 @@ final class UserAuth: ObservableObject {
                 return
             }
             
-            let userEntry = UserEntry(uid: user.uid, fullname: fullname, username: username,
-                                      email: email, lists: [])
-            
-            if let jsonData = Helpers.structToJson(object: userEntry) {
-                strongSelf.db.collection("users").document(user.uid).setData(jsonData)
+            PlaidRequest.shared.createLinkToken(userID: user.uid) { token in
+                guard let token else { return }
+                print("LINK TOKEN: \(token)")
+                
+                PlaidRequest.shared.exchangePublicToken(publicToken: token) { accessToken in
+                    let userEntry = UserEntry(uid: user.uid, fullname: fullname, username: username,
+                                              email: email, linkToken: token, accessToken: accessToken, lists: [])
+                    if let jsonData = Helpers.structToJson(object: userEntry) {
+                        strongSelf.db.collection("users").document(user.uid).setData(jsonData)
+                    }                    
+                    strongSelf.user = user
+                }
             }
-            
-            strongSelf.user = user
         }
     }
     
@@ -46,6 +52,13 @@ final class UserAuth: ObservableObject {
             }
             strongSelf.user = user
         }
+    }
+    
+    func updateLinkTokenForUser(linkToken: String) {
+        guard let uid = self.user?.uid else { return }
+        db.collection("users").document(uid).updateData([
+            "linkToken": linkToken
+        ])
     }
     
     func forgotPassword(email: String) {

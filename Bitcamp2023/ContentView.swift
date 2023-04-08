@@ -17,6 +17,14 @@ struct ContentView: View {
                 .environmentObject(authViewModel)
         } else {
             TabView {
+                OnboardingView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house.fill")
+                            Text("ONBOARD")
+                        }
+                    }
+                
                 // add all items below
                 HomeView().tabItem {
                     VStack {
@@ -24,6 +32,14 @@ struct ContentView: View {
                         Text("Home")
                     }
                 }
+                
+                RealPlaidLinkView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house.fill")
+                            Text("Connect")
+                        }
+                    }
             }
             .onAppear() {
                 authViewModel.checkUserState()

@@ -53,8 +53,6 @@ struct CreateAccountView: View {
                 ButtonDesign(buttonText: "Create Account", buttonColor: .blue)
                     .padding([.leading, .trailing], 30)
             }
-//            .disableWithOpacity(fullname.isEmpty || username.isEmpty ||  email.isEmpty
-//                                || password.isEmpty || password != confirmPassword)
             
             HStack {
                 Spacer()

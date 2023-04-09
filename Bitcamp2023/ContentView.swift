@@ -18,7 +18,7 @@ struct ContentView: View {
         } else {
             TabView {
                 // add all items below
-                HomeView().tabItem {
+                HeaderView().tabItem {
                     VStack {
                         Image(systemName: "house.fill")
                         Text("Home")

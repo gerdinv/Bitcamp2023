@@ -11,7 +11,7 @@ import SwiftUI
 struct Bitcamp2023App: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
+    var dm: DBManager = DBManager()
     var body: some Scene {
         
         let authViewModel: UserAuth = UserAuth()
@@ -19,6 +19,7 @@ struct Bitcamp2023App: App {
         WindowGroup {
             ContentView()
                 .environmentObject(authViewModel)
+                .environmentObject(dm)
                 .onAppear() {
                     authViewModel.checkUserState()
                 }

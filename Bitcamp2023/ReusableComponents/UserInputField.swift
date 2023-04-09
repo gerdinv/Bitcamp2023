@@ -23,10 +23,21 @@ struct UserInputField: View {
                     .frame(width: 14, height: 15)
                     .padding(.leading, 10)
             }
-            TextField("\(placeholder)", text: $userInput)
-                .textContentType(contentType)
-                .foregroundColor(.primary)
-                .padding(.leading)
+            if contentType == .emailAddress {
+                TextField("\(placeholder)", text: $userInput)
+                    .textContentType(contentType)
+                    .foregroundColor(.primary)
+                    .padding(.leading)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    
+            } else {
+                TextField("\(placeholder)", text: $userInput)
+                    .textContentType(contentType)
+                    .foregroundColor(.primary)
+                    .padding(.leading)
+            }
+            
             Image(systemName: "xmark.circle.fill")
                 .padding([.trailing, .top, .bottom])
                 .foregroundColor(userInput.isEmpty ? .secondary : .primary)

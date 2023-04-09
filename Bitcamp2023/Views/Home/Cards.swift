@@ -56,7 +56,7 @@ struct SmallMoneyCardView: View {
                     .textCase(.lowercase)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 10)
-                    .padding(.top, -20)
+                    .padding(.top, -30)
                     .padding(.bottom, 5)
 
                     .font(.system(size: fontSize))
@@ -94,7 +94,7 @@ struct MembersCardView: View {
                     .font(.system(size: fontSize, weight: .bold, design: .default))
                  
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .center)
         }
         .frame(height: UIScreen.main.bounds.height / 12)
         .cornerRadius(20)
@@ -113,22 +113,24 @@ struct SmallMemberView: View {
 
     var body: some View {
         ZStack {
-            Color.gray.opacity(0.4)
+            Color.blue.opacity(0.4)
             
-            HStack {
+            VStack {
                 
-                Text("\(label): \(name)")
+                Text("\(label):")
                     .font(.system(size: fontSize, weight: .bold, design: .default))
                     .textCase(.lowercase)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 10)
-                    .font(.system(size: fontSize))
-//                Text("$\(name)")
-//                    .font(.system(size: fontSize, weight: .bold, design: .default))
+                    .padding(.top, -30)
+                    .padding(.bottom, 5)
+                Text("\(name)")
+                    .font(.system(size: fontSize, weight: .bold, design: .default))
                  
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(height: UIScreen.main.bounds.height / 12)
+        .frame(height: UIScreen.main.bounds.height / 8)
         .cornerRadius(20)
     }
 }

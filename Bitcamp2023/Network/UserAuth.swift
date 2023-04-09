@@ -19,23 +19,23 @@ final class UserAuth: ObservableObject {
     @Published var errorWithRequest: Bool = false
     
     func createAccount(fullname: String, username: String, email: String, password: String) {
-        print("\nSending create account request...\n")
-        auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self, error == nil, let user = authResult?.user else {
-                print("Error creating user!")
-                return
-            }
-            
-            let userEntry = UserEntry(uid: user.uid, fullname: fullname, username: username,
-                                      email: email, lists: [])
-            
-            if let jsonData = Helpers.structToJson(object: userEntry) {
-                strongSelf.db.collection("users").document(user.uid).setData(jsonData)
-            }
-            
-            strongSelf.user = user
-        }
-    }
+       print("\nSending create account request...\n")
+       auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
+           guard let strongSelf = self, error == nil, let user = authResult?.user else {
+               print("Error creating user!")
+               return
+           }
+           
+           let userEntry = UserEntry(uid: user.uid, fullname: fullname,
+                                     email: email, expenses: [String:Int](), income:0, groups:[])
+           
+           if let jsonData = Helpers.structToJson(object: userEntry) {
+               strongSelf.db.collection("users").document(user.uid).setData(jsonData)
+           }
+           
+           strongSelf.user = user
+       }
+   }
     
     func signIn(email: String, password: String) {
         print("\nSending sign in request...\n")

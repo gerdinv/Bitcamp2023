@@ -13,12 +13,22 @@ struct HomeView: View {
     let fontSize: CGFloat = 20
     let subscriptFontSize: CGFloat = 23
     
-    var netIncome = 12834.00
-    var grossIncome = 15104.00
-    var spending = 2270.64
-    var members = 4
-    var topSpender = "Gerdin"
-    var topSaver = "Sathwik"
+    var netIncome = 0
+    var grossIncome = 0
+    var spending = 0
+    @State var members = 0
+    @State var topSpender = "-"
+    @State var topSaver = "-"
+    
+    @State var expenses = 0
+    @State var income = 0
+    
+    @Binding var selectedGroup: String
+    @Binding var refresh: Bool
+    
+    @State var test:[String] = []
+    
+    @EnvironmentObject var dm: DBManager
     
     
     let monthAndYear: String = {
@@ -28,6 +38,28 @@ struct HomeView: View {
         let date = Date()
         return dateFormatter.string(from: date).uppercased()
     }()
+    
+    func getExpenses() -> Int {
+        expenses = 0
+        for i in test {
+            dm.getExpenses(uid: i) { val, error in
+                for (_,v) in val {
+                    expenses += v
+                }
+            }
+        }
+        return expenses
+    }
+    
+    func getIncome() -> Int {
+        income = 0
+        for i in test {
+            dm.getIncome(uid: i) { val, error in
+                income+=val
+            }
+        }
+        return income
+    }
     
     
     
@@ -42,12 +74,12 @@ struct HomeView: View {
                 .textCase(.uppercase)
             
             
-            NetCardView(netIncome: netIncome)
+            NetCardView(netIncome: Double(income - expenses))
             
             HStack {
-                SmallMoneyCardView(label: "gross income", money: grossIncome)
+                SmallMoneyCardView(label: "gross income", money: Double(income))
                 
-                SmallMoneyCardView(label: "spending", money: spending)
+                SmallMoneyCardView(label: "spending", money: Double(expenses))
             }
             
             
@@ -60,6 +92,38 @@ struct HomeView: View {
                 SmallMemberView(label: "top saver", name: topSaver)
             }
             
+            Button {
+                
+                
+                 
+                
+                if selectedGroup == "Roommates" {
+                    test = ["Tzuyu","Momo","Sana"]
+                    topSpender = "Momo"
+                    members = 3
+                    topSaver = "Tzuyu"
+                } else if selectedGroup == "Friends" {
+                    test = ["John Doe", "Tzuyu"]
+                    topSpender = "Sana"
+                    members = 2
+                    topSaver = "John Doe"
+                } else {
+                    test = ["Tzuyu"]
+                    members = 1
+                    topSpender = "Aang"
+                    topSaver = "Sana"
+                }
+                
+                
+                getIncome()
+                getExpenses()
+            } label: {
+                Image(systemName: "arrow.clockwise.circle.fill").font(.system(size: 24))
+            }
+            .position(x: 340, y: -610)
+                .foregroundColor(.indigo)
+            
+
             
             
 
@@ -74,6 +138,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(selectedGroup: .constant("Roommates"), refresh: .constant(false))
     }
 }

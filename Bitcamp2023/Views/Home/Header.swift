@@ -27,12 +27,31 @@ import SwiftUI
 
 
 struct HeaderView: View {
+    
+    @EnvironmentObject var dm: DBManager
+    
     @State private var isPopupVisible = false
-    @State private var allGroups = ["Friends", "Family", "Church", "Cows", "Bitcamp"]
+    
+    @State private var allGroups: [String] = []
+    
+    @State var refresh: Bool = false
+    
+//    @State private var allGroups = ["Friends", "Family", "Church", "Cows", "Bitcamp"]
     @State private var currentGroupIndex: Int = 0
+    
+    @State private var currentGroup: String = ""
+    
     @State private var arrowUp = false
     @State private var showCreateGroupSheet = false
     @State private var showJoinGroupSheet = false
+    
+    
+    func getGroups() {
+        dm.getAllGroups(uid: "Tzuyu") {val, error in
+            allGroups = val
+        }
+       
+    }
 
     var body: some View {
         ZStack {
@@ -46,17 +65,20 @@ struct HeaderView: View {
                     }
                     .padding(.leading, 16)
                     Spacer()
-
-                    GroupButton(groupName: allGroups[currentGroupIndex], arrowUp: $arrowUp) {
-                        isPopupVisible.toggle()
+                    if !allGroups.isEmpty {
+                        GroupButton(groupName: allGroups[currentGroupIndex], arrowUp: $arrowUp) {
+                            isPopupVisible.toggle()
+                        }
+                        .padding(.trailing, -2)
                     }
-                    .padding(.trailing, -2)
+                    
+                    
                     Spacer()
 
-                    AddGroupButton{
-
-                    }
-                    .padding(.trailing, 23)
+//                    AddGroupButton(refresh: $refresh){
+//
+//                    }
+//                    .padding(.trailing, 23)
                 }
                 .padding(.bottom, 10)
                 .background(isPopupVisible ? Color.clear : Color.clear)
@@ -67,20 +89,27 @@ struct HeaderView: View {
                 Spacer()
             }
         }
+        .onAppear {
+            getGroups()
+        }
     }
     
     @ViewBuilder
     var content: some View {
-        HomeView()
-            .overlay(alignment: .top) {
-                overlay
-            }
+        if !allGroups.isEmpty {
+            HomeView(selectedGroup: $allGroups[currentGroupIndex], refresh: $refresh)
+                .overlay(alignment: .top) {
+                    overlay
+                }
+        }
+        
     }
     
     @ViewBuilder
     var overlay: some View {
         if isPopupVisible {
             VStack(alignment: .center, spacing: 0) {
+                
                 ForEach(0..<allGroups.count) { index in
                     Button(action: {
                         // Move the selected group to the first position in the allGroups array
@@ -90,12 +119,14 @@ struct HeaderView: View {
                         arrowUp.toggle()
                     }) {
                         HStack {
-                            Rectangle()
-                                .frame(width: 5)
-                                .foregroundColor(Color.indigo)
+
                             
                             Spacer()
                             if (index == currentGroupIndex) {
+                                Rectangle()
+                                    .frame(width: 5)
+                                    .foregroundColor(Color.indigo)
+                                
                                 Text(allGroups[index])
                                     .foregroundColor(.black)
                                     .frame(maxWidth: 400, alignment: .leading)
@@ -211,16 +242,30 @@ struct GroupButton: View {
     }
 }
 
-struct AddGroupButton: View {
-//    @Binding var isAvailable: Bool
-    var action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            Image(systemName: "plus").padding(0).font(.system(size: 14))
-            Image(systemName: "person").padding(-8).font(.system(size: 24))
-        }
-            .foregroundColor(.indigo)
-            .frame(width: 30, height: 40)
-    }
-}
+//struct AddGroupButton: View {
+////    @Binding var isAvailable: Bool
+//
+//    @Binding var refresh: Bool
+//    var action: () -> Void
+//
+//    var body: some View {
+//
+//
+//
+//        Button {
+//
+//            refresh = true
+//        } label: {
+//            Image(systemName: "arrow.clockwise.circle.fill").font(.system(size: 24))
+//        }
+//            .foregroundColor(.indigo)
+//            .frame(width: 40, height: 40)
+//
+////        Button(action: action) {
+//////            Image(systemName: "plus").padding(0).font(.system(size: 14))
+////            Image(systemName: "arrow.clockwise.circle.fill").padding(-8).font(.system(size: 24))
+////        }
+////            .foregroundColor(.indigo)
+////            .frame(width: 40, height: 40)
+//    }
+//}

@@ -32,6 +32,13 @@ struct ContentView: View {
                     }
                 }
                 
+                FormView().tabItem {
+                    VStack {
+                        Image(systemName: "square.and.pencil")
+                        Text("Form")
+                    }
+                }
+                
             }
             .onAppear() {
                 authViewModel.checkUserState()
